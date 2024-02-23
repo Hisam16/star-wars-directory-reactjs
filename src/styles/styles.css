@@ -1,0 +1,156 @@
+/* src/styles/styles.css */
+body {
+  font-family: "Roboto", sans-serif;
+  background-image: url("../assets/img/starwar-bg.jpg"); /* Replace 'your-transparent-background-image.jpg' with your image file path */
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+  z-index: 2; /* Ensure that other elements are rendered on top of the background */
+}
+
+h1 {
+  margin: 0;
+  padding: 10px;
+  color: #f8f8f8;
+}
+
+.planets-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center the planets cards */
+}
+
+.planet-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align text to the left within the card */
+  transition: transform 0.3s ease-in-out; /* Add a subtle transition effect */
+}
+
+.planet-card:hover {
+  transform: scale(1.05); /* Enlarge the card on hover for a subtle effect */
+}
+
+h2 {
+  color: #0077cc; /* Use a color that complements the design */
+}
+
+p {
+  margin: 8px 0;
+  color: #555;
+}
+
+.residents-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.residents-table th,
+.residents-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.residents-table th {
+  background-color: #f2f2f2;
+}
+
+.info-button {
+  margin-left: 10px;
+}
+
+.resident-info {
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  display: inline-block;
+}
+
+.pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #005fa3; /* Darken the background color on hover */
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+/* Add these styles to your CSS file */
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+@keyframes appearAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+  .planet-card {
+    width: 80%; /* Adjust the width for smaller screens */
+  }
+}
